@@ -7,109 +7,126 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Welcome to your Profile Wizard</h1>
-    <h2>Save your profile information with ease</h2>
+    <section class="hero-section">
+      <h1>Welcome to your Profile Wizard</h1>
+      <h2>Save your profile information with ease</h2>
+      <button id="start-wizard">Start</button>
+    </section>
     <main class="container">
-      <h3>Please fill your personal information:</h3>
-      <section class="panel personal-information">
-        <div class="input-container">
-          <div class="control-input">
-            <label>First Name</label>
-            <input />
-          </div>
-          <div class="control-input">
-            <label>Middle Name</label>
-            <input />
-          </div>
-          <div class="control-input">
-            <label>Last Name</label>
-            <input />
-          </div>
-          <div class="control-input">
-            <label>Age</label>
-            <input />
-          </div>
-          <div class="control-input">
-            <label>Phone Number</label>
-            <input />
-          </div>
-          <div class="control-input">
-            <label>Email</label>
-            <input />
-          </div>
-        </div>
-        <div class="buttons-container">
-          <button>Next</button>
-        </div>
-      </section>
-      <h3>Please fill your educational information:</h3>
-      <section class="panel educational-information">
-        <div>
-          <h4>Highschool</h4>
+      <section class="hidden personal-information">
+        <h3>Please fill your personal information:</h3>
+        <div class="panel">
           <div class="input-container">
             <div class="control-input">
-              <label>Institution</label>
-              <input />
+              <label>First Name</label>
+              <input name="firstName" />
             </div>
             <div class="control-input">
-              <label>Start Year</label>
-              <input />
+              <label>Middle Name</label>
+              <input name="middleName" />
             </div>
             <div class="control-input">
-              <label>End Year</label>
-              <input />
+              <label>Last Name</label>
+              <input name="lastName" />
+            </div>
+            <div class="control-input">
+              <label>Age</label>
+              <input name="age" />
+            </div>
+            <div class="control-input">
+              <label>Phone Number</label>
+              <input name="phoneNumber" />
+            </div>
+            <div class="control-input">
+              <label>Email</label>
+              <input name="email" />
             </div>
           </div>
-          <h4>College</h4>
-          <div class="input-container">
-            <div class="control-input">
-              <label>Institution</label>
-              <input />
-            </div>
-            <div class="control-input">
-              <label>Start Year</label>
-              <input />
-            </div>
-            <div class="control-input">
-              <label>End Year</label>
-              <input />
-            </div>
+          <div class="buttons-container">
+            <button id="go-to-step-2">Next</button>
           </div>
-        </div>
-        <div class="buttons-container">
-          <button>Back</button>
-          <button>Next</button>
         </div>
       </section>
-      <h3>Please fill your professional information</h3>
-      <section class="panel professional-information">
-        <div class="input-container">
-          <div class="control-input">
-            <label>Company Name</label>
-            <input />
+
+      <section class="hidden educational-information">
+        <h3>Please fill your educational information:</h3>
+        <div class="panel">
+          <div>
+            <h4>Highschool</h4>
+            <div class="input-container">
+              <div class="control-input">
+                <label>Institution</label>
+                <input name="highscoolInstitution" />
+              </div>
+              <div class="control-input">
+                <label>Start Year</label>
+                <input name="highschoolStartYear" />
+              </div>
+              <div class="control-input">
+                <label>End Year</label>
+                <input name="higschoolEndYear" />
+              </div>
+            </div>
+            <h4>College</h4>
+            <div class="input-container">
+              <div class="control-input">
+                <label>Institution</label>
+                <input name="collegeInstitution" />
+              </div>
+              <div class="control-input">
+                <label>Start Year</label>
+                <input name="collegeStartYear" />
+              </div>
+              <div class="control-input">
+                <label>End Year</label>
+                <input name="collegeEndYear" />
+              </div>
+            </div>
           </div>
-          <div class="control-input">
-            <label>Role</label>
-            <input />
-          </div>
-          <div class="control-input">
-            <label>Start Date</label>
-            <input />
-          </div>
-          <div class="control-input">
-            <label>End Date</label>
-            <input />
-          </div>
-          <div class="control-input">
-            <label>Skills</label>
-            <textarea rows="4"></textarea>
+          <div class="buttons-container">
+            <button id="back-to-step-1">Back</button>
+            <button id="go-to-step-3">Next</button>
           </div>
         </div>
-        <div class="buttons-container">
-          <button>Back</button>
-          <button>Finish</button>
+      </section>
+
+      <section class="hidden professional-information">
+        <h3>Please fill your professional information</h3>
+        <div class="panel">
+          <div class="profesional-inputs-container">
+            <div class="control-input">
+              <label>Company Name</label>
+              <input name="companyName" />
+            </div>
+            <div class="control-input">
+              <label>Role</label>
+              <input name="role" />
+            </div>
+            <div class="control-input">
+              <label>Start Date</label>
+              <input name="startDate" />
+            </div>
+            <div class="control-input">
+              <label>End Date</label>
+              <input name="endDate" />
+            </div>
+            <div class="skills control-input">
+              <label>Skills</label>
+              <textarea rows="4"></textarea>
+            </div>
+          </div>
+          <div class="buttons-container">
+            <button id="back-to-step-2">Back</button>
+            <button id="finish-wizard">Finish</button>
+          </div>
         </div>
+      </section>
+      <section>
+        <p>
+          My name is <span id="firstName"></span> <span id="middleName"></span>
+        </p>
       </section>
     </main>
+    <script src="./index.js" charset="UTF-8"></script>
   </body>
 </html>

@@ -14,13 +14,19 @@ body {
 h1 {
   color: var(--primary-color);
   font-weight: 600;
-  text-align: center;
+  margin: 0;
 }
 h2 {
-  text-align: center;
+  margin: 0;
 }
 h4 {
   margin-bottom: 0.5rem;
+}
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
 }
 .container {
   display: flex;
@@ -55,4 +61,7 @@ h4 {
 }
 .skills {
   grid-column: span 2;
+}
+.hidden {
+  display: none;
 }
