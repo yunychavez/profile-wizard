@@ -112,7 +112,7 @@
             </div>
             <div class="skills control-input">
               <label>Skills</label>
-              <textarea rows="4"></textarea>
+              <textarea name="skills" rows="4"></textarea>
             </div>
           </div>
           <div class="buttons-container">
@@ -121,12 +121,94 @@
           </div>
         </div>
       </section>
-      <section>
-        <p>
-          My name is <span id="firstName"></span> <span id="middleName"></span>
-        </p>
+      <section class="hidden profile-sumary">
+        <div class="panel">
+          <div class="profile-table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">Profile Sumary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>First Name</td>
+                  <td id="firstName"></td>
+                </tr>
+                <tr>
+                  <td>Middle Name</td>
+                  <td id="middleName"></td>
+                </tr>
+                <tr>
+                  <td>Last Name</td>
+                  <td id="lastName"></td>
+                </tr>
+                <tr>
+                  <td>Age</td>
+                  <td id="age"></td>
+                </tr>
+                <tr>
+                  <td>Phone Number</td>
+                  <td id="phoneNumber"></td>
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td id="email"></td>
+                </tr>
+                <tr>
+                  <td>Highschool Institution</td>
+                  <td id="highschoolInstitution"></td>
+                </tr>
+                <tr>
+                  <td>Highschool StartYear</td>
+                  <td id="highschoolStartYear"></td>
+                </tr>
+                <tr>
+                  <td>Higschool EndYear</td>
+                  <td id="higschoolEndYear"></td>
+                </tr>
+                <tr>
+                  <td>College Institution</td>
+                  <td id="collegeInstitution"></td>
+                </tr>
+                <tr>
+                  <td>College StartYear</td>
+                  <td id="collegeStartYear"></td>
+                </tr>
+                <tr>
+                  <td>College EndYear</td>
+                  <td id="collegeEndYear"></td>
+                </tr>
+                <tr>
+                  <td>Company Name</td>
+                  <td id="companyName"></td>
+                </tr>
+                <tr>
+                  <td>Role</td>
+                  <td id="role"></td>
+                </tr>
+                <tr>
+                  <td>Start Date</td>
+                  <td id="startDate"></td>
+                </tr>
+                <tr>
+                  <td>End Date</td>
+                  <td id="endDate"></td>
+                </tr>
+                <tr>
+                  <td>Skills</td>
+                  <td id="skills"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="buttons-container">
+            <button id="start-again">Start Again</button>
+          </div>
+        </div>
       </section>
     </main>
+    <script src="./nav_functions.js" charset="UTF-8"></script>
     <script src="./index.js" charset="UTF-8"></script>
   </body>
 </html>
